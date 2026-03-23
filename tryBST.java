@@ -89,7 +89,7 @@ public class tryBST {
 
         public static void main(String[] args){
 
-            int n = (int)Math.pow(2, 15) - 1;
+            int n = (int)Math.pow(2, 20) - 1;
             int reps = 30;
 
             long[] populateTimes = new long[reps];
@@ -138,8 +138,10 @@ public class tryBST {
 
             double stdPopulate = Math.sqrt(varPopulate / reps);
             double stdRemove = Math.sqrt(varRemove / reps);
+                
+            System.out.println("Method\t\t n\t Avg(ms)\t StdDev");
+            System.out.println("--------------------------------");
+            System.out.println("Populate\t " + n + "\t " + avgPopulate + "\t " + stdPopulate);
+            System.out.println("Remove\t\t " + n + "\t " + avgRemove + "\t " + stdRemove);    
         }
-
-
-
     }
